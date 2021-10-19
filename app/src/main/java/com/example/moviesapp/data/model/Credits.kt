@@ -7,7 +7,7 @@ data class Credits(
     val known_for_department: String = "",
     val name: String = "",
     val original_name: String = "",
-    val popularity: Double = 1.815,
+    val popularity: Double = -1.0,
     val profile_path: String = "",
     val cast_id: Int = 4,
     val character: String = "",
