@@ -4,8 +4,8 @@ import com.google.gson.annotations.SerializedName
 
 data class Movie(
     val id: Int = -1,
-    @SerializedName("adult")
-    val adultos: Boolean = false,
+    //@SerializedName("adult")
+    val adult: Boolean = false,
     val gender_ids: List<Int> = listOf(),
     val backdrop_path: String = "",
     val original_title: String = "",
@@ -20,6 +20,6 @@ data class Movie(
     val vote_count: Int = -1
 )
 
-//data class MovieList(
-//    val results:List<Movie> = listOf()
-//)
+data class MovieList(
+    val results:List<Movie> = listOf()
+)
