@@ -12,7 +12,7 @@ interface WebService {
     @GET("movie/upcoming")
     suspend fun getUpcomingMovies(@Query("api_key") apiKey: String): MovieList
 
-    @GET("movie/toprated")
+    @GET("movie/top_rated")
     suspend fun getTopRatedMovies(@Query("api_key") apiKey: String): MovieList
 
     @GET("movie/popular")
