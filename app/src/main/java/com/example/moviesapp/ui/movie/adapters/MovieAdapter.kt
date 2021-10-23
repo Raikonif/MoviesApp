@@ -31,11 +31,11 @@ class MovieAdapter: RecyclerView.Adapter<BaseViewHolder<*>>() {
     private inner class MoviesViewHolder(
         val binding: MovieItemBinding,
         val context: Context
-    ):
-        BaseViewHolder<Movie>(binding.root){
+    ) :
+        BaseViewHolder<Movie>(binding.root) {
         override fun bind(item: Movie) {
-            Glide.with(context)
+            Glide.with(context).load()
         }
-        }
+    }
 
 }
