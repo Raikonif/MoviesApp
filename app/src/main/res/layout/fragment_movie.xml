@@ -5,10 +5,13 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.movie.MovieFragment">
+
 <RelativeLayout
+    android:id="@+id/progress_bar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="visible">
+    android:visibility="gone">
+
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

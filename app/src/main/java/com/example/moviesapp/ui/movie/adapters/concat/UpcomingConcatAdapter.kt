@@ -8,7 +8,8 @@ import com.example.moviesapp.databinding.PopularMoviesRowBinding
 import com.example.moviesapp.databinding.UpcomingMoviesRowBinding
 import com.example.moviesapp.ui.movie.adapters.MovieAdapter
 
-class UpcomingConcatAdapter (private val movieAdapter: MovieAdapter) : RecyclerView.Adapter<BaseConcatHolder<*>>() {
+class UpcomingConcatAdapter (private val movieAdapter: MovieAdapter) :
+    RecyclerView.Adapter<BaseConcatHolder<*>>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseConcatHolder<*> {
         val itemBinding = UpcomingMoviesRowBinding.inflate(
