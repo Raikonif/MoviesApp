@@ -16,16 +16,14 @@ class MovieRepositoryImpl(
         return dataSourceLocal.getUpcomingMovies()
     }
 
-    override suspend fun getTopRatedMovies():
-            MovieList {
+    override suspend fun getTopRatedMovies(): MovieList {
         dataSourceRemote.getTopRatedMovies().results.forEach { movie ->
-            dataSourceLocal.saveMovie(movie.toMovieEntity("top_rated"))
+            dataSourceLocal.saveMovie(movie.toMovieEntity("toprated"))
         }
         return dataSourceLocal.getTopRatedMovies()
     }
 
-    override suspend fun getPopularMovies():
-            MovieList {
+    override suspend fun getPopularMovies(): MovieList {
         dataSourceRemote.getPopularMovies().results.forEach { movie ->
             dataSourceLocal.saveMovie(movie.toMovieEntity("popular"))
         }

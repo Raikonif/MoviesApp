@@ -17,16 +17,17 @@ abstract class AppDatabase: RoomDatabase() {
         private var INSTANCE: AppDatabase? = null
 
         fun getDatabase(context: Context): AppDatabase {
-            INSTANCE = INSTANCE ?: Room.databaseBuilder(
-                context.applicationContext,
-                AppDatabase::class.java,
-                "movie_table"
-            ).build()
-            return INSTANCE!!
+            INSTANCE = INSTANCE ?:
+                Room.databaseBuilder(
+                    context.applicationContext,
+                    AppDatabase::class.java,
+                    "movie_table"
+                ).build()
+                return INSTANCE!!
+            }
         }
 
         fun destroyInstance(){
             INSTANCE = null
         }
     }
-}
