@@ -25,7 +25,7 @@ class MovieViewModel(private val repo: MovieRepository): ViewModel() {
     }
 }
 
-abstract class MovieViewModelFactory(private val repo: MovieRepository):ViewModelProvider.Factory {
+class MovieViewModelFactory(private val repo: MovieRepository):ViewModelProvider.Factory {
     override fun <T: ViewModel> create(modelClass: Class<T>): T{
         return modelClass.getConstructor(MovieRepository::class.java).newInstance(repo)
     }
